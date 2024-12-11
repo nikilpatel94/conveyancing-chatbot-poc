@@ -34,7 +34,7 @@ def intent_checker_agent(prompt):
                 *Instructions:
                 ONLY output a single digit while responding. Output either 0,1,2,3 for the provided question using following conditions.
                 1. If question is related to getting the status of the case, output "0". 
-                2. If question is about asking a human help or you need extra input for generating accurate response, output "1".
+                2. If question is about asking a human help or something pertaining to the conveyancing domain that you are not aware of , output "1".
                 3. Otherwise, output "2"
                 *Question: {prompt}
 
@@ -68,10 +68,11 @@ def db_agent():
                 -You work for the company named WSG Strategies based in the UK.
                 -Answer only with the following update about the user's case status. Do not respond with any extra information.
                 -If you get multiple fields separated by comma, respond in the following format: 
-                        User: <first field>
-                        Status: <second field>
-                        Details: <third_field>
-                        Documents: <third_field>
+                    
+                        ->User: <first field>
+                        ->Status: <second field>
+                        ->Details: <third_field>
+                        ->Documents: <third_field>
                 -If not, respond with the provided case information.
                 
                 *Case Information :{case_information}"""
@@ -117,7 +118,7 @@ if 'openai_response' not in st.session_state:
     st.session_state['openai_response'] = []
 
 def get_text():
-    input_text = st.text_input("Your Query", key="input")
+    input_text = st.text_input("Enter Your Query", key="input")
     return input_text
 
 user_input = get_text()
