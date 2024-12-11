@@ -147,5 +147,5 @@ if st.session_state['user_input']:
         message(st.session_state["user_input"][i],
                 key=str(i), avatar_style="icons")
         message(st.session_state['openai_response'][i],
-                avatar_style="miniavs", is_user=True
+                avatar_style="bottts", is_user=True
                 , key=str(i) + 'data_by_user')

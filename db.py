@@ -20,7 +20,19 @@ def init_db():
     sample_data = [
         ("stargazer94", "Open", "Property transfer in progress", "contract.pdf"),
         ("pulsar342", "Closed", "Case resolved successfully", "closure_report.pdf"),
-        ("martianspider876", "Pending", "Awaiting client documents", "")
+        ("martianspider876", "Pending", "Awaiting client documents", ""),
+        ("nebulaRider99", "Open", "Mortgage approval in progress", "mortgage_details.pdf"),
+        ("cosmicTrail88", "Closed", "Property sale completed", "sale_deed.pdf"),
+        ("quasarHunter777", "Pending", "Verification of ownership documents", "ownership_proof.pdf"),
+        ("solarFlare123", "Open", "Land registry in progress", "land_registry.pdf"),
+        ("galaxySeeker47", "Closed", "Case resolved with compensation", "compensation_details.pdf"),
+        ("orbitWatcher56", "Pending", "Awaiting payment confirmation", "payment_receipt.pdf"),
+        ("starForge22", "Open", "Title deed processing", "title_deed.pdf"),
+        ("lunarEcho789", "Closed", "Property dispute resolved", "dispute_resolution.pdf"),
+        ("planetSurfer101", "Pending", "Client response required", "client_request.pdf"),
+        ("cometChaser333", "Open", "Legal review ongoing", "legal_review.pdf"),
+        ("asteroidHopper66", "Closed", "Conveyancing completed successfully", "completion_certificate.pdf"),
+        ("cosmosNavigator55", "Pending", "Approval from authorities required", "authority_approval.pdf")
     ]
     cursor.executemany("INSERT OR IGNORE INTO cases (user_id, case_status, case_details, documents) VALUES (?, ?, ?, ?)", sample_data)
     conn.commit()
