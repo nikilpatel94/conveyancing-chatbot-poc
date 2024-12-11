@@ -1,0 +1,4 @@
+.env
+db_fetcher.py
+chatbot.db
+__pycache__/*
