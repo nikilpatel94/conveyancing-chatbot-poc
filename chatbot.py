@@ -97,7 +97,7 @@ def answer_responder_agent(prompt):
                 "role": "user",
                 "content": f"""
                 *Instructions:
-                -You work for the company named WSG Strategies based in the UK.
+                -You work for the company named WS Strategic based in the UK.
                 -Greet them back if the user greet you and inquire about how you can help them regarding any conveyancing related queries.
                 -Answer only for conveyancing queries of the company named. Also, make sure that you answer ONLY and ONLY when the query is related to legal conveyancing process in the UK.
                 -For other queries, politely deny to reveal any information with small talk.
@@ -110,7 +110,7 @@ def answer_responder_agent(prompt):
     response = chat_completion.choices[0].message.content
     return response
 
-st.title("WSG Conveyancing bot")
+st.title("WS Strategic Conveyancing bot")
 if 'user_input' not in st.session_state:
     st.session_state['user_input'] = []
 
@@ -118,7 +118,7 @@ if 'openai_response' not in st.session_state:
     st.session_state['openai_response'] = []
 
 def get_text():
-    input_text = st.text_input("Enter Your Query", key="input")
+    input_text = st.text_input("Enter your conveyancing query", key="input")
     return input_text
 
 user_input = get_text()
